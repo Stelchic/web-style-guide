@@ -10,10 +10,14 @@
     padding: 10px 0;
     text-transform: uppercase;
     border-radius: 5px;
+    transition: background-color 0.3s ease-in;
   }
   
   @each $button, $colour in $buttons {
       .#{$button} {
           background-color: $colour;
+        &:hover {
+            background-color: lighten($color: $colour, $amount: 15%);
+        }
       }
   }
